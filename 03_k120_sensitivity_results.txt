@@ -1,0 +1,134 @@
+SENSITIVITY ANALYSIS: SPATIAL k = 120
+=====================================
+
+M1_k120: Summary
+-----------------
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+nmqm ~ MSP_f + s(wfl.gekappt, k = 20) + s(age, k = 20) + s(centroid_x, 
+    centroid_y, k = 120)
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 2.507731   0.004638  540.70   <2e-16 ***
+MSP_f2023   0.165858   0.006452   25.71   <2e-16 ***
+MSP_f2025   0.198432   0.006716   29.55   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                            edf Ref.df      F p-value    
+s(wfl.gekappt)            8.461 10.409  62.70  <2e-16 ***
+s(age)                    7.664  9.263 138.59  <2e-16 ***
+s(centroid_x,centroid_y) 65.804 85.096  11.99  <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.338   Deviance explained = 31.8%
+-ML =  24553  Scale est. = 0.060098  n = 9217
+
+M0_k20 vs M1_k120: ANOVA
+---------------------------
+Analysis of Deviance Table
+
+Model 1: nmqm ~ MSP_f + s(wfl.gekappt, k = 20) + s(age, k = 20)
+Model 2: nmqm ~ MSP_f + s(wfl.gekappt, k = 20) + s(age, k = 20) + s(centroid_x, 
+    centroid_y, k = 120)
+  Resid. Df Resid. Dev     Df Deviance      F    Pr(>F)    
+1      9188     654.35                                     
+2      9107     589.65 80.916     64.7 13.305 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+M0_k20 vs M1_k120: AIC
+-------------------------
+              df      AIC
+M0_k20  26.08903 49832.39
+M1_k120 88.11570 48986.49
+
+
+M2_k120: Summary
+-----------------
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+nmqm ~ MSP_f + s(wfl.gekappt, k = 20) + s(age, k = 20) + s(centroid_x, 
+    centroid_y, by = MSP_f, k = 120)
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 2.508088   0.004665  537.62   <2e-16 ***
+MSP_f2023   0.167471   0.006472   25.88   <2e-16 ***
+MSP_f2025   0.197995   0.006739   29.38   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                                      edf Ref.df       F p-value    
+s(wfl.gekappt)                      8.485  10.43  63.331  <2e-16 ***
+s(age)                              7.611   9.18 140.812  <2e-16 ***
+s(centroid_x,centroid_y):MSP_f2021 47.633  64.55   7.015  <2e-16 ***
+s(centroid_x,centroid_y):MSP_f2023 31.257  43.80   6.521  <2e-16 ***
+s(centroid_x,centroid_y):MSP_f2025 37.540  52.00   6.558  <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.336   Deviance explained =   32%
+-ML =  24605  Scale est. = 0.060141  n = 9217
+
+
+M3_k120_diff20: Summary
+------------------------
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+nmqm ~ MSP_f + s(wfl.gekappt, k = 20) + s(age, k = 20) + s(centroid_x, 
+    centroid_y, k = 120) + s(centroid_x, centroid_y, by = MSP_f_ordered, 
+    k = 20)
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 2.507716   0.004639  540.59   <2e-16 ***
+MSP_f2023   0.165888   0.006453   25.71   <2e-16 ***
+MSP_f2025   0.198661   0.006719   29.57   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                                              edf Ref.df       F p-value    
+s(wfl.gekappt)                              8.457 10.405  62.886  <2e-16 ***
+s(age)                                      7.677  9.278 138.506  <2e-16 ***
+s(centroid_x,centroid_y)                   65.706 84.994  11.616  <2e-16 ***
+s(centroid_x,centroid_y):MSP_f_ordered2023  2.003  2.006   0.910   0.403    
+s(centroid_x,centroid_y):MSP_f_ordered2025  2.007  2.015   2.138   0.117    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.338   Deviance explained = 31.8%
+-ML =  24551  Scale est. = 0.06008   n = 9217
+
+M1_k120 vs M3_k120_diff20: ANOVA
+----------------------------------
+Analysis of Deviance Table
+
+Model 1: nmqm ~ MSP_f + s(wfl.gekappt, k = 20) + s(age, k = 20) + s(centroid_x, 
+    centroid_y, k = 120)
+Model 2: nmqm ~ MSP_f + s(wfl.gekappt, k = 20) + s(age, k = 20) + s(centroid_x, 
+    centroid_y, k = 120) + s(centroid_x, centroid_y, by = MSP_f_ordered, 
+    k = 20)
+  Resid. Df Resid. Dev     Df Deviance      F Pr(>F)
+1    9107.0     589.65                              
+2    9103.1     589.34 3.9887  0.30894 1.2892 0.2717
+
+M1_k120 vs M3_k120_diff20: AIC
+--------------------------------
+                    df      AIC
+M1_k120        88.1157 48986.49
+M3_k120_diff20 92.0972 48989.57
