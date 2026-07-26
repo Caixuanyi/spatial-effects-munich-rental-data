@@ -177,7 +177,7 @@ distribution <- ggplot(
   labs(
     x = "rent per square metre (EUR)",
     y = "Count",
-    title = "Distribution of Net Rent per Square Metre"
+    title = "Distribution of Rent per Square Metre"
   ) +
   theme_minimal()
 
