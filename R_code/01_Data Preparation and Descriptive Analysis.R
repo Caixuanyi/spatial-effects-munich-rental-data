@@ -174,7 +174,7 @@ distribution <- ggplot(
     colour = "white"
   ) +
   labs(
-    x = "Net rent per square metre (EUR)",
+    x = "rent per square metre (EUR)",
     y = "Count",
     title = "Distribution of Net Rent per Square Metre"
   ) +
@@ -202,7 +202,7 @@ area <- ggplot(
   ) +
   labs(
     x = "Living area (square metres)",
-    y = "Net rent per square metre (EUR)",
+    y = "rent per square metre (EUR)",
     title = "Exploratory Relationship Between Living Area and Rent"
   ) +
   theme_minimal()
@@ -227,7 +227,7 @@ age <- ggplot(
   ) +
   labs(
     x = "Building age (years)",
-    y = "Net rent per square metre (EUR)",
+    y = "rent per square metre (EUR)",
     title = "Exploratory Relationship Between Building Age and Rent"
   ) +
   theme_minimal()
