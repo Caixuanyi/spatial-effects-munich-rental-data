@@ -637,7 +637,7 @@ p_m2_clean <- p_m2 +
 
 ggsave(
   filename = "spatial_effect_m2.pdf",
-  plot = p_m1_clean,
+  plot = p_m2_clean,
   width = 9,
   height = 5,
   units = "in"
