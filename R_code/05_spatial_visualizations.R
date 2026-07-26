@@ -483,13 +483,6 @@ p_m1_clean <- p_m1 +
     caption = NULL
   )
 
-ggsave(
-  filename = "spatial_effect_m1.pdf",
-  plot = p_m1_clean,
-  width = 9,
-  height = 5,
-  units = "in"
-)
 
 
 ##Figure2 with M2
@@ -635,13 +628,6 @@ p_m2_clean <- p_m2 +
     caption = NULL
   )
 
-ggsave(
-  filename = "spatial_effect_m2.pdf",
-  plot = p_m2_clean,
-  width = 9,
-  height = 5,
-  units = "in"
-)
 
 
 ##Figure 3 with M3
@@ -785,15 +771,6 @@ p_diff_clean <- p_diff +
     caption = NULL
   )
 
-ggsave(
-  filename = "spatial_effect_m3.pdf",
-  plot = p_diff_clean,
-  width = 9,
-  height = 5,
-  units = "in"
-)
-
-
 ## Figure 1 with M1_k60
 
 grid_m1_k60 <- make_pred_grid(
@@ -885,15 +862,6 @@ p_m1_k60_clean <- p_m1_k60 +
     subtitle = NULL,
     caption = NULL
   )
-
-ggsave(
-  filename = "spatial_effect_m1_k60.pdf",
-  plot = p_m1_k60_clean,
-  width = 9,
-  height = 5,
-  units = "in"
-)
-
 ## Figure 2 with M2_k60
 
 sp_2021_k60 <- get_year_spatial(
@@ -1012,14 +980,6 @@ p_m2_k60_clean <- p_m2_k60 +
     caption = NULL
   )
 
-ggsave(
-  filename = "spatial_effect_m2_k60.pdf",
-  plot = p_m2_k60_clean,
-  width = 9,
-  height = 5,
-  units = "in"
-)
-
 ## Figure 3 with M3_k60
 
 diff_2023_k60 <- get_difference_map(
@@ -1130,14 +1090,6 @@ p_diff_k60_clean <- p_diff_k60 +
     caption = NULL
   )
 
-ggsave(
-  filename = "spatial_effect_m3_k60.pdf",
-  plot = p_diff_k60_clean,
-  width = 9,
-  height = 5,
-  units = "in"
-)
-
 
 ## Figure 1 with M1_k120
 
@@ -1235,13 +1187,7 @@ p_m1_k120_clean <- p_m1_k120 +
     caption = NULL
   )
 
-ggsave(
-  filename = "spatial_effect_m1_k120.pdf",
-  plot = p_m1_k120_clean,
-  width = 9,
-  height = 5,
-  units = "in"
-)
+
 
 ##figure 2 mit m2 k120
 
@@ -1363,13 +1309,7 @@ p_m2_k120_clean <- p_m2_k120 +
     caption = NULL
   )
 
-ggsave(
-  filename = "spatial_effect_m2_k120.pdf",
-  plot = p_m2_k120_clean,
-  width = 9,
-  height = 5,
-  units = "in"
-)
+
 
 
 
@@ -1484,10 +1424,4 @@ p_diff_k120_diff20_clean <- p_diff_k120_diff20 +
     caption = NULL
   )
 
-ggsave(
-  filename = "spatial_effect_m3_k120.pdf",
-  plot = p_diff_k120_diff20_clean,
-  width = 9,
-  height = 5,
-  units = "in"
-)
+
