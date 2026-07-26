@@ -139,9 +139,10 @@ coord_check
 #response check (skewness, mean, median)
 skewness_fun <- function(x) {
   x <- x[is.finite(x)]
-  mean(
-    (x - mean(x))^3
-  ) / sd(x)^3
+  m <- mean(x)
+
+  mean((x - m)^3) /
+    mean((x - m)^2)^(3/2)
 }
 
 response_check <- rent_data %>%
