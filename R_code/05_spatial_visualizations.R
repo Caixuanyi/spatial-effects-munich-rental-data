@@ -1425,3 +1425,16 @@ p_diff_k120_diff20_clean <- p_diff_k120_diff20 +
   )
 
 
+print(p_m1_clean)
+print(p_m2_clean)
+print(p_diff_clean)
+
+print(p_m1_k60_clean)
+print(p_m2_k60_clean)
+print(p_diff_k60_clean)
+
+
+print(p_m1_k120_clean)
+print(p_m2_k120_clean)
+print(p_diff_k120_diff20_clean)
+
